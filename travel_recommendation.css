@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6));
+    padding: 13px 20px;
+    color: white;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00c8c8; /* Hover color */
+}
+
+#search {
+    width: 300px;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+}
+/* Search Area Styling */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 350px; /* Adjust as needed */
+}
+
+#search {
+    width: 100%;
+    padding: 15px 40px 15px 15px; /* Space for buttons on the right */
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+#btnSearch,
+#btnClear {
+    position: absolute;
+    right: 65px;
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+#btnClear {
+    right: 10px; /* Clear button closer to the edge */
+}
+
+#btnSearch:hover {
+    background-color: darkcyan;
+}
+
+#btnClear:hover {
+    background-color: #e63939;
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(41, 97, 65, 0.877), rgba(41, 97, 65, 0.3)),
+                url('./new.png') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 1200px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.book-now {
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.book-now:hover {
+    background-color: d
+}
+
+/* Social Icons Styling */
+.social-icons {
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Space between icons */
+}
+
+.social-icons::before {
+    content: "";
+    width: 2px;
+    height: 200px;
+    background-color: white;
+    margin-bottom: 90px; 
+    margin-top: -70px;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #007bff;
+    transform: scale(1.2);
+}
+
+.fa-brands{
+    font-size: 26px;
+}
+
+.team{
+    
+    margin-top: 30px;
+}
+
+.bg-description{
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+}
+
+
+.team ul li{
+    margin: 0 10px;
+    padding: 10px;
+}
+
+.team a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* General Styles */
+.team ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-title {
+   
+    margin-bottom: 30px;
+}
+
+/* Person Section */
+.person {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.person-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.person-info i {
+    font-size: 40px; /* Icon size */
+    margin-right: 20px; /* Space between icon and text */
+}
+
+.person-details h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.person-details p {
+    font-size: 16px;
+    color: #ccc; /* Light grey text for description */
+}
+.position{
+    min-width: 70%;
+    background-color: rgba(67, 58, 197, 0.827);
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    border-color: white;
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+.fa-user{
+    font-size: 15px !important;
+    background-color: rgba(67, 58, 197, 0.827);
+    padding: 5px;
+}
+
+.left-side,
+.right-side {
+    width: 50%; /* Split content into two equal parts */
+    padding: 20px;
+}
+
+.left-side h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Form Styling */
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    margin-left: 180px;
+}
+
+.form div {
+    margin-bottom: 10px;
+}
+
+.form label {
+    font-size: 16px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: transparent;
+}
+
+.form button {
+    padding: 10px 20px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    background-color: darkcyan;
+}
+.btn-submit{
+    width: 100%;
+}

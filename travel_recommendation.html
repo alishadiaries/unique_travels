@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Explore Destinations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" />
+    <link rel="stylesheet" href="./travel_recommendation.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">TravelBloom</div>
+        <ul>
+            <li><a href="./travel_recommendation.html">Home</a></li>
+            <li><a href="./about_us.html">About Us</a></li>
+            <li><a href="./contact_us.html">Contact Us</a></li>
+            <li>
+                <div class="search-container">
+                    <input type="text" id="search" placeholder="Enter a destination or keyword">
+                    <button id="btnSearch">Search</button>
+                    <button id="btnClear">Clear</button>
+                </div>
+            </li>
+            
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>EXPLORE <br> DREAM <br> DESTINATION</h1>
+            <p>
+                It encourages exploration of unfamiliar territories, embracing diverse cultures and 
+                landscapes, while pursuing the desired destination that captivates the heart and 
+                ignites a sense of wonder.
+            </p>
+            <button class="book-now">BOOK NOW</button>
+        </div>
+        
+        <div class="social-icons">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </section> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./travel_recommendation.js"></script>
+    <script>
+        $('#btnClear').on('click', function(){
+            $('#search').val('');
+        })
+
+        $('#btnSearch').on('click', function(){
+
+        })
+    </script>
+</body>
+</html>
+
