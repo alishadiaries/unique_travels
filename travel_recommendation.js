@@ -1,5 +1,6 @@
 $('#btnSearch').on('click', function() {
     const searchQuery = $('#search').val().toLowerCase();
+
     $.ajax({
         url: '/unique_travels/api.json',
         type: 'GET',
@@ -10,35 +11,33 @@ $('#btnSearch').on('click', function() {
                 temples: [],
                 countries: []
             };
-        
-            data.beaches.forEach(beach => {
-                if (beach.name.toLowerCase().includes(searchQuery) && results.beaches.length < 2) {
-                    results.beaches.push(beach);
-                }
-            });
-    
-            data.temples.forEach(temple => {
-                if (temple.name.toLowerCase().includes(searchQuery) && results.temples.length < 2) {
-                    results.temples.push(temple);
-                }
-            });
-        
-            data.countries.forEach(country => {
-                country.cities.forEach(city => {
-                    if (city.name.toLowerCase().includes(searchQuery) && results.countries.length < 2) {
-                        results.countries.push(city);
-                    }
+
+            if (searchQuery.includes("beach")) {
+                results.beaches = data.beaches.slice(0, 2); 
+            }
+
+            if (searchQuery.includes("temple")) {
+                results.temples = data.temples.slice(0, 2); 
+            }
+
+            if (searchQuery.includes("country")) {
+                data.countries.forEach(country => {
+                    country.cities.forEach(city => {
+                        if (results.countries.length < 2) {
+                            results.countries.push(city);
+                        }
+                    });
                 });
-            });
-        
+            }
+
             const allResults = [...results.beaches, ...results.temples, ...results.countries];
+
             if (allResults.length > 0) {
                 displayResults(allResults);
             } else {
                 alert('No results found!');
             }
-        }
-        ,
+        },
         error: function() {
             alert('Error fetching data');
         }
@@ -46,8 +45,8 @@ $('#btnSearch').on('click', function() {
 });
 
 const resultsContainer = $('#searchResults');
+
 function displayResults(results) {
-    
     resultsContainer.empty();
 
     results.forEach(result => {
@@ -66,4 +65,4 @@ function displayResults(results) {
 $('#btnClear').on('click', function(){
     resultsContainer.empty();
     $('#search').val('');
-})
+});
