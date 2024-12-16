@@ -335,7 +335,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-height: 200px;
+    max-height: 400px;
     overflow-y: auto;
     width: 36%;
     border-radius: 10px;
