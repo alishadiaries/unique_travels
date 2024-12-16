@@ -40,19 +40,25 @@ $('#btnSearch').on('click', function() {
     });
 });
 
+const resultsContainer = $('#searchResults');
 function displayResults(results) {
-    let resultsContainer = $('#searchResults');
+    
     resultsContainer.empty();
 
     results.forEach(result => {
         let resultHTML = `
             <div class="result-item">
-                <h3>${result.name}</h3>
                 <img src="${result.imageUrl}" alt="${result.name}">
+                <h3>${result.name}</h3>
                 <p>${result.description}</p>
+                <button>Visit</button>
             </div>
         `;
         resultsContainer.append(resultHTML);
     });
 }
 
+$('#btnClear').on('click', function(){
+    resultsContainer.empty();
+    $('#search').val('');
+})

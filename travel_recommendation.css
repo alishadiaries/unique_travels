@@ -95,7 +95,7 @@ nav a:hover {
     position: relative;
     height: 100vh;
     background: linear-gradient(to right, rgba(41, 97, 65, 0.877), rgba(41, 97, 65, 0.3)),
-                url('./new.png') no-repeat center center/cover;
+                url('./hero.png') no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -322,4 +322,52 @@ nav a:hover {
 }
 .btn-submit{
     width: 100%;
+}
+
+#searchResults {
+    position: absolute;
+    top: 60px; /* Just below the search bar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 80%; /* Adjust as needed */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure it appears above the hero section */
+    display: none; /* Initially hidden */
+}
+
+.result-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+}
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.result-item h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.result-item p {
+    font-size: 16px;
+    color: #666;
 }
