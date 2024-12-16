@@ -1,7 +1,7 @@
 $('#btnSearch').on('click', function() {
     const searchQuery = $('#search').val().toLowerCase();
     $.ajax({
-        url: '/travel_recommendation_api.json',
+        url: 'api.json',
         type: 'GET',
         dataType: 'json',
         success: function(data) {
