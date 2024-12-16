@@ -326,21 +326,18 @@ nav a:hover {
 
 #searchResults {
     position: absolute;
-    top: 60px; /* Just below the search bar */
-    left: 50%;
+    top: 0px;
+    left: 80%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-height: 300px;
+    max-height: 200px;
     overflow-y: auto;
-    width: 80%; /* Adjust as needed */
+    width: 36%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Ensure it appears above the hero section */
-    display: none; /* Initially hidden */
+    z-index: 10;
 }
 
 .result-item {
